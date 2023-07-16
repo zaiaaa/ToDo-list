@@ -9,26 +9,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 </head>
 <body>
-    <div class="geral">
-        <h1>To-Do List</h1>
-        <div class="botoes">
-            <button type="button" class="mainBtn" id="simpleTask" onclick="">
-                Tarefa a ser feita hoje
-            </button>
-            <button type="button" class="mainBtn" id="compTask">
-                Tarefa mais complexa
-            </button>
+    
+    <section>
+        <div class="geral">
+            <h1 class="title">To-Do List</h1>
+            <div class="botoes">
+                <button type="button" class="btn" id="simpleTask" onclick="">
+                    Tarefa simples
+                </button>
+                <button type="button" class="btn" id="compTask">
+                    Tarefa complexa
+                </button>
+            </div>
+            <div class="close" id="newTask">
+                <!-- input for simple task will be there -->
+            </div>
+            <div id="cronometro">
+                <!-- chronometer will be there (ends at 12 a.m) -->
+            </div>
+            <div class="taskSpace" id="taskSpace">
+            <!-- tasks will be there -->
+            </div>
         </div>
-        <div class="close" id="newTask">
-            <!-- input for simple task will be there -->
-        </div>
-        <div id="cronometro">
-            <!-- chronometer will be there (ends at 12 a.m) -->
-        </div>
-        <div class="taskSpace" id="taskSpace">
-        <!-- tasks will be there -->
-        </div>
-</div>
+    </section>
+
     <script src="https://kit.fontawesome.com/5dfb4ac132.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>

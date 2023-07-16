@@ -5,9 +5,11 @@ const localStorageKey = 'to-do-list'
 
 simpleTask.addEventListener("click", () => {
     newSimpleTask.innerHTML = 
-    `<h1>Digite sua tarefa simples pra hoje: <h1>
+    `<h2>Digite sua tarefa simples: </h2>
+        <div class="inputArea">
         <input type="text" id="simpleTaskText">
-        <button id="submitButton" onclick="NewSimpleTask()" type="button">+</button>
+        <button id="submitButton" onclick="NewSimpleTask()" onkeydown="enviar(event)" type="button">+</button>
+        </div>
     `
     newSimpleTask.classList.toggle('close')
     simpleTask.classList.toggle('click')
@@ -47,7 +49,7 @@ function NewSimpleTask(){
     let inputSimpleTask = document.getElementById('simpleTaskText')
     let valor = inputSimpleTask.value
     if(!valor){
-        alert("Sem tarefa")
+        alert("Sem tarefa, escreva uma")
     }else{
         let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]")
         values.push({
@@ -71,7 +73,7 @@ function showValues(){
         taskSpace.innerHTML += `
         <div class='cardTask'>
             <div id='tasks'>
-                Tarefa pra hoje: <br><h2>${valuesJson['name']}</h2>
+                <p class="card-title">Tarefa pra hoje:</p> <h3>${valuesJson['name']}</h3>
                 <button type='button' id='finalizar' onclick='removeItem("${valuesJson['name']}")'><i class='fa-solid fa-check'></i></button>
             </div>
         </div>
@@ -89,7 +91,11 @@ function removeItem(data){
     showValues()
 }
 
-
+function enviar(event){
+    if(event.key == "Enter"){
+        console.log('enter')
+    }
+}
 
 
 
