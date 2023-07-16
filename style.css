@@ -4,13 +4,13 @@
     font-family: 'Roboto', sans-serif;
 }
 body{
-    background-color: black;
+    background-color: #1b1e23;
 }
 section{
     width: 100vw;
 }
 .geral{
-    background-color: #fff;
+    background-color: #c0d3fd;
     margin: 1rem;
     padding: 1rem 0;
     border: 1px solid black;
@@ -28,6 +28,7 @@ section{
     padding: .6rem;
     border: solid 1px black;
     border-radius: .7rem;
+    cursor: pointer;
 }
 #newTask{
     text-align: center;
@@ -44,6 +45,7 @@ section{
     border-radius: 1rem;
     border: 1px solid black;
 }
+
 #submitButton{
     width: 2.3rem;
     height: 2.3rem;
@@ -55,6 +57,13 @@ section{
     border: none;
     background-color: green;
     color: #fff;
+    cursor: pointer;
+    transition: .5s;
+    
+}
+#submitButton:hover{
+    transform: rotate(90deg);
+    transition: .5s;
 }
 
 
@@ -92,13 +101,26 @@ section{
 
     background-color: rgb(32, 167, 32);
     border: 1px solid;
+    cursor: pointer;
+    transition: .4s;
+
 }
+#finalizar:hover{
+    transition: .4s;
+    border-color: #4aa02c;
+    background-color: #4aa02c;
+}
+
 
 #simpleTask{
     transition: all .3s ease;
     background-color: #4aa02c;
     color: #fff;
     font-weight: 400;
+}
+#simpleTask:hover{
+    transition: all .3s ease;
+    background-color: rgb(32, 167, 32);
 }
 #simpleTask.click{
     background-color: rgb(32, 167, 32);

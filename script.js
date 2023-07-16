@@ -44,17 +44,23 @@ function iniciarCronometro(){
         }
     }, 0, 1000)
 }
+let i = 0
 
 function NewSimpleTask(){
+    i++
     let inputSimpleTask = document.getElementById('simpleTaskText')
     let valor = inputSimpleTask.value
     if(!valor){
         alert("Sem tarefa, escreva uma")
     }else{
         let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]")
-        values.push({
-            name: inputSimpleTask.value
-        })
+        
+            values.push({
+                id: i,
+                name: inputSimpleTask.value
+            })
+        
+        
         localStorage.setItem(localStorageKey, JSON.stringify(values))
         iniciarCronometro()
         showValues()
@@ -73,7 +79,7 @@ function showValues(){
         taskSpace.innerHTML += `
         <div class='cardTask'>
             <div id='tasks'>
-                <p class="card-title">Tarefa pra hoje:</p> <h3>${valuesJson['name']}</h3>
+                <p class="card-title">Tarefa ${valuesJson['id']} pra hoje:</p> <h3>${valuesJson['name']}</h3>
                 <button type='button' id='finalizar' onclick='removeItem("${valuesJson['name']}")'><i class='fa-solid fa-check'></i></button>
             </div>
         </div>
