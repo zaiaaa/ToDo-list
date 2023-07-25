@@ -7,7 +7,7 @@ simpleTask.addEventListener("click", () => {
     newSimpleTask.innerHTML = 
     `<h2>Digite sua tarefa simples: </h2>
         <div class="inputArea">
-        <input type="text" id="simpleTaskText">
+        <input type="text" id="simpleTaskText" onkeydown="enviar()">
         <button id="submitButton" onclick="NewSimpleTask()" onkeydown="enviar(event)" type="button">+</button>
         </div>
     `
