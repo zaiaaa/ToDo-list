@@ -84,7 +84,7 @@ function showValues(){
             </div>
         </div>
         `
-    }
+    }    
 }
 showValues()
 
@@ -103,11 +103,6 @@ function enviar(event){
         NewSimpleTask()
     }
 }
-
-
-
-
-
 
 
 
